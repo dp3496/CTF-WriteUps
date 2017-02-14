@@ -22,7 +22,7 @@ Cette fois on vois que la version de notre kernel n'est pas celle attendu par le
 On constate également que le binaire va chercher cette valeur dans "/proc/version". Or il n'est pas possible de modifier ce fichier. Il faut alors trouver un moyen de récupérer le FLAG sans changer cette valeur.
 Pour cela, j'ai créé une nouvelle librairie, 'ctflib.c' et y ai ajouté une nouvelle fonction strcmp(), qui renvoie 0 peu importe les valeurs comparées : 
 
-![](img/skip5.png)
+
 
 On compile ensuite cette nouvelle librairie (-m32 si le binaire est en 32 bits, sinon rien) : 
 
