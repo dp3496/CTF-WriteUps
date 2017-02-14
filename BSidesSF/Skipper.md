@@ -5,7 +5,7 @@ La première chose à faire est de regarder le type du binaire :
 ![](img/skip1.png)
 
 On constate que c'est un ELF 32.
-On essaie ensuite de l'éxecuter, et on peut voir que le nom du PC ne correspondant à celui qu'attend le programme.
+On essaie ensuite de l'éxecuter, et on peut voir que le nom du PC ne correspondant pas à celui qu'attend le programme.
 
 ![](img/skip2.png)
 
