@@ -13,14 +13,14 @@ On utilise alors la commande "ltrace", pour peut-être voir quel est le nom d'or
 
 ![](img/skip3.png)
 
-On voit alors que le nom attendu par le binaire est : hax0rz!
+On voit que le nom attendu par le binaire est : hax0rz!
 On change alors le nom du PC et réexecute le programme : 
 
 ![](img/skip4.png)
 
-Cette fois on vois que la version de notre kernel n'est pas celle attendu par le programme.
+Cette fois on voit que la version de notre kernel n'est pas celle attendu par le programme.
 On constate également que le binaire va chercher cette valeur dans "/proc/version". Or il n'est pas possible de modifier ce fichier. Il faut alors trouver un moyen de récupérer le FLAG sans changer cette valeur.
-Pour cela, j'ai créé une nouvelle librairie, 'ctflib.c' et y ai ajouté une nouvelle fonction strcmp(), qui renvoie 0 peu importe les valeurs comparées : 
+Pour cela, j'ai créé une nouvelle librairie, 'ctflib.c' et y ai ajouté une nouvelle fonction strcmp(), qui renvoie toujours 0 : 
 
 ![](img/ski5.png)
 
