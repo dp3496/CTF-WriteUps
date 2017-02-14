@@ -20,7 +20,7 @@ On change alors le nom du PC et réexecute le programme :
 
 Cette fois on vois que la version de notre kernel n'est pas celle attendu par le programme.
 On constate également que le binaire va chercher cette valeur dans "/proc/version". Or il n'est pas possible de modifier ce fichier. Il faut alors trouver un moyen de récupérer le FLAG sans changer cette valeur.
-Pour cela, j'ai créé une nouvelle librairie, 'ctflib.c' et y ai ajouté une nouvelle fonction strcmp(), qui renvoie 0 peut importe les valeurs comparées : 
+Pour cela, j'ai créé une nouvelle librairie, 'ctflib.c' et y ai ajouté une nouvelle fonction strcmp(), qui renvoie 0 peu importe les valeurs comparées : 
 
 ![](img/skip5.png)
 
@@ -32,4 +32,4 @@ Puis on execute le programme en lui indiquant la nouvelle librairie :
 
 ![](img/skip8.png)
 
-Et bingo ! On obtient le flag !
+Et bingo ! On obtient le flag : **FLAG:f51579e9ca38ba87d71539a9992887ff**
