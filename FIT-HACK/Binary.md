@@ -137,7 +137,7 @@ Une fois connecté sur le serveur, 2 commandes sont disponibles:
    - Une pour se connecter avec son identifiant
    - Une autre pour se connecter en tant que professeur (admin) avec nom d'utilisateur et mot de passe
 
-En regardant la fonction, process_admin_command(c) on comprend les identifiants d'étudiants sont générés:
+En regardant la fonction, process_admin_command(c) on comprend comment les identifiants d'étudiants sont générés:
 ```python
 def process_admin_command(c):
     if c[0] == 'help':
@@ -163,7 +163,7 @@ def process_admin_command(c):
         sys.stdout.flush()
 ```
 
-La variable *Student ID* est le sha256 du nom de l'étudiant précéder d'un salt (*EzA1CVFsmRf8BGubQNrd*).
+La variable *Student ID* est le sha256 du nom de l'étudiant précéder d'un salt (**EzA1CVFsmRf8BGubQNrd**).
 On récupère alors l'identifiant de *Wilhelmina Braunschweig Ingenohl Friedeburg* :
 
 ```python
@@ -176,8 +176,9 @@ h = hashlib.sha256(salt + login)
 k3y = h.hexdigest()
 print(k3y)
 ```
-On se connecte sur le serveur et on entre la commande : *login fbf832b18bde7cb48fff1f79e07c8c3cdaaabcc726ca99b6f69ff7801d2b873c*
-On est alors connecté en tant que *Wilhelmina Braunschweig Ingenohl Friedeburg*, on fait la commande "view" pour voir ses notes et on obtient le flag.
+On se connecte sur le serveur et on entre la commande :     
+**$ login fbf832b18bde7cb48fff1f79e07c8c3cdaaabcc726ca99b6f69ff7801d2b873c**
+On est alors connecté en tant que *Wilhelmina Braunschweig Ingenohl Friedeburg*, on fait la commande "view" pour voir ses notes et on obtient le flag.     
 Malheuresement, le serveur n'étant plus en ligne je n'ai pas pu récupérer le flag.
 
 
