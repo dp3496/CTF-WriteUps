@@ -1,4 +1,4 @@
-## Crypto 100 - Simple Cipher
+# Crypto 100 - Simple Cipher
 
 Pour ce challenge, nous avons un message chiffré ainsi que le code utilisé pour le chiffrer.
 En regardant le code, on peut voir que le message a été chiffré en faisant un XOR du message clair et de la clé (J2msBeG8).
@@ -37,7 +37,7 @@ print plain
 ```
 Et on obtient le flag : FIT{Thi5_cryp74n4lysi5_wa5_very_5impl3}
 
-## Crypto 100 - encryption program leaked
+# Crypto 100 - encryption program leaked
 
 Pour ce challenge, une clef, un chiffré ainsi que le programme de chiffrement nous sont fournis.
 On commence par regarder le script, et on voit que :
