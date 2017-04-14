@@ -1,4 +1,4 @@
-## Binary 100 - Random
+### Binary 100 - Random
 
 Pour ce challenge on a un binaire (ELF 64).
 On essaie de l'exécuter une première fois, et on voit qu'il y a 10 round, et on suppose qu'à chaque round on doit trouver le nombre aléatoire.
@@ -33,7 +33,7 @@ Puis on éxecute le programme normalement en entrant ces valeurs :
 Et on obtient le flag !
 
 
-## Binary 100 - Execution
+### Binary 100 - Execution
 
 
 Pour ce challenge, nous avons un binaire. Avec la commande "file", on voit que l'architecture de ce dernier est de l'ARM.
@@ -56,4 +56,5 @@ for c in to_convert:
 print(''.join(m))
 ```
 On execute et on obtient le flag , sans le "F" du début : IT{3xecuti0n_c0mp1ete}
+
 FLAG : FIT{3xecuti0n_c0mp1ete}
