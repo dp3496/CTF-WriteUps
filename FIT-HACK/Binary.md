@@ -31,3 +31,29 @@ Puis on éxecute le programme normalement en entrant ces valeurs :
 ![](img/random4.png?raw=true)
 
 Et on obtient le flag !
+
+
+## Binary 100 - Execution
+
+
+Pour ce challenge, nous avons un binaire. Avec la commande "file", on voit que l'architecture de ce dernier est de l'ARM.
+On ouvre le programme avec GDB et on désassemble la fonction main :
+
+On peut voir qu'au lancement du programme des octets sont poussés sur la pile :
+
+![](img/execution1.png?raw=true)
+
+On recupére ces valeurs en héxadecimal, les convertis en ASCII et les concatene :
+
+```python
+m = []
+
+to_convert = ['49','54','7b','33','78','65','63','75','74','69','30','6e','5f','63','30','6d','70','31','65','74','65','7d']
+
+
+for c in to_convert:
+	m.append(chr(int(c,16)))
+print(''.join(m))
+```
+On execute et on obtient le flag , sans le "F" du début : IT{3xecuti0n_c0mp1ete}
+FLAG : FIT{3xecuti0n_c0mp1ete}
