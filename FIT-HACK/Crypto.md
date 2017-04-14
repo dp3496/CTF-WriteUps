@@ -59,7 +59,7 @@ cipher =[]
 
 for k in key:
 	hex_key.append(ord(k))
-hex_key.append(20)
+hex_key.append(0) # On ajoute un 0 pour que la clef et le message chiffré fasse la même taille
 
 cpt = 0	
 while cpt < len(encrypt):
