@@ -36,3 +36,42 @@ for c in out.keys():
 print plain
 ```
 Et on obtient le flag : FIT{Thi5_cryp74n4lysi5_wa5_very_5impl3}
+
+## Crypto 100 - encryption program leaked
+
+Pour ce challenge, une clef, un chiffré ainsi que le programme de chiffrement nous sont fournis.
+On commence par regarder le script, et on voit que :
+  - Le message est encodé en base64
+  - La fonction "padd" ajuste la taille de la clef et du message pour qu'elle soit identique
+  - Le chiffrement est un XOR de la clef et du message
+  - Le message est inversé avant d'effectuer le XOR
+	
+On ecrit alors un petit script pour déchiffrer le message :
+	
+```python
+import base64
+
+key = 'eglafdsewafslfewamfeopwamfe'
+encrypt = '5857342f555c2528182b55175e5f543a14540a0617394504380a0e52'
+
+hex_key = []
+cipher =[]
+
+for k in key:
+	hex_key.append(ord(k))
+hex_key.append(20)
+
+cpt = 0	
+while cpt < len(encrypt):
+	cipher.append(int(encrypt[cpt]+encrypt[cpt+1],16))
+	cpt+=2
+
+
+plain = [chr(i^j) for i,j in zip(cipher,hex_key)]
+
+plain = plain[::-1]
+plain = ''.join(plain)
+print(base64.b64decode(plain))
+```
+Et on obtient le flag : FIT{b1r_n3_vwrh1_75}
+
