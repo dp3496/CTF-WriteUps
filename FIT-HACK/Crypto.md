@@ -5,6 +5,7 @@ En regardant le code, on peut voir que le message a été chiffré en faisant un
 Cependant, on constate que le chiffrement se passe de la façon suivante :
   - L'octet de la clé est XORé avec les X octets du message où X est taille(message) / taille(clef) et l'indice des octets du message est calcul en fonction du compteur du tour de chiffrement et de la taille de la clef.
   Pour mieux comprendre, voici l'execution du code de chiffrement avec les calculs effectués :
+  
   ![](img/simplecipher1.png?raw=true)
 
 Pour dechiffré le message, il suffit alors de reprendre la fonction utilisé pour le chiffrement et l'adapter :
