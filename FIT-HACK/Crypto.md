@@ -69,7 +69,7 @@ while cpt < len(encrypt):
 
 plain = [chr(i^j) for i,j in zip(cipher,hex_key)]
 
-plain = plain[::-1]
+plain = plain[::-1] # On inverse le sens du message dechiffré
 plain = ''.join(plain)
 print(base64.b64decode(plain))
 ```
