@@ -83,5 +83,4 @@ while cmd != "q":
 Then i was able to send request to the site from any country in the world where a free proxy is available.
 Below the screenshot of the script running : 
 
-![](img/write_up_SHA.PNG)
 ![](img/write_up_SHA2.PNG)
