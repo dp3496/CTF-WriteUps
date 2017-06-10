@@ -8,7 +8,7 @@ To change the origin country of the request, i use the mozilla firefox add-on "A
 So i tried to send a request by adding the header "X-Forwarded-For" and the ip address of a free proxy in the pays where the hacker is.
 And thats worked !
 
-So i wrote a ![a link](proxy_SHA.py) that take 3 commands in input :
+So i wrote a ![python script](proxy_SHA.py) that take 3 commands in input :
   - country : print the country where the hacker is and the number of country to before finding him
   - mv <@ip_proxy> : Add the "X-Forwarded-For" header with the IP specified.
   - restart : Some country don't have free proxy available
